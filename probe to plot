@@ -29,11 +29,11 @@ f = open('ProbeToPlot.csv', 'w')
 while count < 10:
     start_time = datetime.now()
     
-  NUMBER_OF_SAMPLES = 50
+  NUMBER_OF_SAMPLES = 51
 
     start_time = datetime.now()
     
-    for n in range (0, NUMBER_OF_SAMPLES):
+    for n in range (1, NUMBER_OF_SAMPLES):
 
     
         i = ReadChannel(channel)
