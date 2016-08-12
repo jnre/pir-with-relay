@@ -22,7 +22,7 @@ def ConvertVolts(data,places):
 
 channel = 0
 count = 0
-delay = 1
+sleepdelay = 1
 
 f = open('ProbeToPlot.csv', 'w')
 
