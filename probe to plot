@@ -29,19 +29,30 @@ f = open('ProbeToPlot.csv', 'w')
 while count < 10:
     start_time = datetime.now()
     
-    NUMBER_OF_SAMPLES = 1000
+  NUMBER_OF_SAMPLES = 180
+
+    start_time = datetime.now()
+    
     for n in range (0, NUMBER_OF_SAMPLES):
+
+    
         i = ReadChannel(channel)
         v = ConvertVolts(i, 9)
         
-        f.write("{},".format(v))
+        if n > 60:
+            f.write("{},".format(v))
 
+        "20ms(50hz)/60readings= 0.000333333 = 3000hz""" 
+        time.sleep(0.000333333333) 
+        
+    stoptime = datetime.now()
     f.write("\n")
     
-    stoptime = datetime.now()
-    print("Probe time : {} ms ".format((stoptime-start_time).microseconds/1000))
     
-    time.sleep(delay)
+    print("Probe time : {} milliseconds ".format((stoptime -start_time).microseconds/1000))
+    
+    
+    time.sleep(sleepdelay)
     count = count + 1 
 
 f.close()
