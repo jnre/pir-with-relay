@@ -29,7 +29,7 @@ f = open('ProbeToPlot.csv', 'w')
 while count < 10:
     start_time = datetime.now()
     
-  NUMBER_OF_SAMPLES = 51
+    NUMBER_OF_SAMPLES = 51
 
     start_time = datetime.now()
     
